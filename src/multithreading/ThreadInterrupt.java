@@ -1,12 +1,14 @@
 package multithreading;
 
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class ThreadInterrupt {
 
 	public static void main(String[] args) {
 		Thread t0 = new Thread(new Runner5());
-		t0.start();
+		t0.start();Queue<Integer> queue = new LinkedList<>();
 		try {
 			System.out.println("Before join: @ "+ new Date());
 			t0.join(2000);
