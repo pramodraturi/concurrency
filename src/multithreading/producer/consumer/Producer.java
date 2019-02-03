@@ -20,7 +20,7 @@ public class Producer extends Thread{
 		while(true) {
 			synchronized (queue) {
 				while(queue.size() == maxCapacity) {
-					System.out.println("Queue is Full, Producer thread is waiting for Consumer to consumer items...");
+					System.out.println("Queue is Full, Producer thread is waiting for Consumer to consumer items... UPdated");
 					try {
 						queue.wait();
 					} catch (InterruptedException e) {
